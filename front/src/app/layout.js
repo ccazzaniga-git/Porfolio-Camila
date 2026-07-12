@@ -1,0 +1,31 @@
+
+import Nav from "@/componentes/Nav";
+
+
+export const metadata = {
+  title: "Portfolio Camila",
+  description: "Portfolio y trabajo final",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>
+        <header>
+          <div className="holder">
+            <div className="logo">
+              <img src="/logopeque.svg" alt="Logo" />
+              <h1>Hola! Soy Camilictucs</h1>
+            </div>
+          </div>
+        </header>
+
+
+        <Nav />
+
+
+        {children}
+      </body>
+    </html>
+  );
+}
