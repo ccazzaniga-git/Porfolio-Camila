@@ -1,4 +1,4 @@
-
+import "@/styles/globals.css";
 import Nav from "@/componentes/Nav";
 
 
@@ -20,12 +20,15 @@ export default function RootLayout({ children }) {
           </div>
         </header>
 
-
         <Nav />
 
 
         {children}
+
+        <footer>
+          <p> Diseñador por Camila Cazzaniga &copy;2026 </p>
+        </footer>
       </body>
     </html>
-  );
+  )
 }

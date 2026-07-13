@@ -1,4 +1,7 @@
+import "@/styles/home.css";
 import Image from "next/image";
+
+
 
 export default function Home() {
   return (
@@ -16,16 +19,13 @@ export default function Home() {
           <div className="testimonios">
             <h2> Segundo Título </h2>
             <div className="testimonio">
-              <span className="cita"> "Comentario de alquien"</span>
+              <span className="cita"> Comentario de alquien </span>
               <span className="autor"> Persona que - comentó </span>
             </div>
           </div>
         </div>
 
       </main>
-      <footer>
-        <p> Diseñador por Camila Cazzaniga &copy;2026 </p>
-      </footer>
     </div >
   );
 }

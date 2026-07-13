@@ -1,7 +1,10 @@
+
+import "@/styles/contacto.css";
+
 import ContactoForm from "@/componentes/ContactoForm";
 
 export const metadata = {
-    title: "Portfolio Camila :: Contacto",
+    title: "Contacto",
     description: "Portfolio y trabajo final",
 };
 
@@ -11,12 +14,13 @@ export default function Contacto() {
         <main className="holder contacto">
             <div className="columna">
                 <h2>Completa el siguiente formulario</h2>
-               {/*componente de conacto*/}
+                
                <ContactoForm/>
+
             </div>
             <div className="columna">
                 <h2>Otra manera de contactarnos</h2>
-                <p>A través de los siguientes mediois:</p>
+                <p>A través de los siguientes medios:</p>
                 <ul>
                     <li>Teléfono: 123456789</li>
                     <li>Email: </li>

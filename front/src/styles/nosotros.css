@@ -1,0 +1,46 @@
+.historia p{
+    font-size: 16px;
+    line-height: 18px;
+}
+
+/*queria lograr que se vea el texto al lado de las imagenes, y no queria caer en el "zigzag" de la seccion de servicios*/
+
+.personas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.persona {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.personainfo {
+    text-align: right;
+    line-height: 8px;
+}
+
+.persona img {
+    width: 350px;
+    max-width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+    display: block;
+    background-color: #74d4fa8a;
+}
+
+.personainfo h3,
+.personainfo h4 {
+    color: #C83609;
+}
+
+.personainfo h4 {
+    font-style: italic;
+    font-weight: 500;
+}
+
+.personainfo p {
+    font-size: 14px;
+}

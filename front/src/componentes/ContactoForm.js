@@ -1,22 +1,22 @@
-export default function ContactForm() {
+export default function ContactoForm() {
 
     return (
         <>
-            <form action="/contacto" method="post" className="form-group">
+            <form action="/contacto" method="post" className="formulario">
                     <p>
-                          <label>Nombre:</label>
+                          <label>Nombre</label>
                           <input type="text" name="nombre"/>
                     </p>
                     <p>
-                          <label>Email:</label>
+                          <label>Email</label>
                           <input type="text" name="email"/>
                     </p>
                     <p>
-                          <label>Teléfono:</label>
+                          <label>Teléfono</label>
                           <input type="text" name="teléfono"/>
                     </p>
                     <p>
-                          <label>Comentario:</label>
+                          <label>Comentario</label>
                           <textarea name="comentario"></textarea>
                     </p>
 

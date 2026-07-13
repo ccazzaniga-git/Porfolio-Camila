@@ -1,4 +1,4 @@
-export default async function ProductoItem(props) {
+export default async function ProductoItem (props) {
 
 
     const {titulo, subtitulo, imagen, body} = props;

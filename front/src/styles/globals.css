@@ -1,0 +1,177 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.holder {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h2{
+    color: #006483;
+    font-weight: 500;
+}
+
+header {
+    background-color: #006483;
+    padding: 16px 0;
+}
+
+header h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 100;
+    font-style: italic;
+    display: inline-block;
+    position: relative;
+    bottom: 35px;
+    margin-left: 10px;
+}
+
+nav {
+    background-color: #C83609;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    flex-grow: 1;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 3px 6px;
+    display: block;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #ff5100e8;
+}
+
+nav ul li a.activo {
+    background-color: #ff5100e8;
+}
+
+
+
+footer {
+    background-color: #006483;
+    clear: both;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 20px;
+}
+
+header img {
+    border-radius: 12px;
+    margin-left: 10px;
+}
+
+
+
+
+/*Inicio de HOME*/
+/* Fin de HOME*/
+
+
+/*Inicio de NOSOTROS*/
+/* Fin de NOSOTROS*/
+
+
+/* Inicio de Productos*/
+
+/*Mis imágenes son de diferentes dimensiones que las que envió porque mi idea es reemplazarlas luego, pero menos espacio que eso seria muy pequeñas para mostrar el contenido que tengo pensado (Espero quede bien despues)*/
+
+.producto{
+    border: 1px solid #74d4fa8a;
+    padding: 16px;
+    display: flex;
+    border-radius: 10px;
+    gap: 32px;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.producto .info h3{
+    color: #C83609;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #74d4fa8a;
+    padding-bottom: 10px;
+}
+
+.producto:nth-child(even) .info h3{
+    color: #006483;
+}
+
+.producto .info p{
+    font-size: 14px;
+}
+
+.producto img{
+    width: 300px; /*achique las imagenes en este caso para poder trabajar mejor con el ejemplo*/
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Fin de Productos*/
+
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} */
