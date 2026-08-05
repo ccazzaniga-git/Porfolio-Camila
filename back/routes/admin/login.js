@@ -10,6 +10,13 @@ router.get('/', function (req, res, next) {
   });
 });
 
+router.get('/logout', function (req, res, next) {
+  req.session.destroy();
+  res.render('admin/login', {
+    layout: 'admin/layout'
+  });
+});
+
 /*proceso de formulario */
 
 router.post('/', async (req, res, next) => {
@@ -17,9 +24,12 @@ router.post('/', async (req, res, next) => {
     var usuario = req.body.usuario; //camilictucs o flavia
     var password = req.body.password; // 1111  o   1234
 
-    var user = await usuariosModel.getUserByUsernameAndPassword(usuario, password);
+    var data = await
+    usuariosModel.getUserByUsernameAndPassword(usuario, password);
 
     if (data != undefined) {
+      req.session.id_usuario = data.id;
+      req.session.nombre = data.usuario;
       res.redirect('/admin/novedades');
     } else {
       res.render('admin/login', {
@@ -29,9 +39,8 @@ router.post('/', async (req, res, next) => {
     }
   } catch (error) {
     console.log(error);
+
   }
-
-
 });
 
 module.exports = router;
