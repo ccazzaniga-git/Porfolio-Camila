@@ -10,6 +10,8 @@ router.get('/', function (req, res, next) {
   });
 });
 
+
+/* destruir sesion*/
 router.get('/logout', function (req, res, next) {
   req.session.destroy();
   res.render('admin/login', {
@@ -28,8 +30,8 @@ router.post('/', async (req, res, next) => {
     usuariosModel.getUserByUsernameAndPassword(usuario, password);
 
     if (data != undefined) {
-      req.session.id_usuario = data.id;
-      req.session.nombre = data.usuario;
+      req.session.id_usuario = data.id; //id de usuario
+      req.session.nombre = data.usuario; //nombre de usuario
       res.redirect('/admin/novedades');
     } else {
       res.render('admin/login', {

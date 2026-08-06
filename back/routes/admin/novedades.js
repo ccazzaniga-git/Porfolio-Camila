@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 
 /* lista de novedades */
-router.get('/', function (req, res, next) {
+router.get('/', async function (req, res, next) {
   res.render('admin/novedades', { //novedades.hbs
     layout: 'admin/layout',
-    usuario: req.session.nombre,
+    usuario: req.session.nombre
   });
 });
 
