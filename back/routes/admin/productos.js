@@ -13,4 +13,11 @@ router.get('/', async function (req, res, next) {
 });
 
 
+router.get('/agregar', (req, res, next) => {
+  res.render('admin/agregar', {  //agregar.hbs
+    layout: 'admin/layout'
+  });
+});
+
+
 module.exports = router;
