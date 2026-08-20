@@ -2,8 +2,8 @@
 
     {{!-- botón para volver --}}
     <div class="row">
-        <div class="col-7">
-            <h2 class="mb-4">Agregar Nuevo Producto</h2>
+        <div class="col-6 offset-3">
+            <h2 class="mb-4">Modificar Producto</h2>
         </div>
         <div class="col-5 text-end">
             <a class="btn btn-secondary" href="/admin/productos"><i class="fa fa-arrow-left" aria-hidden="true"></i>
@@ -11,10 +11,10 @@
         </div>
     </div>
 
-    {{!-- Formulario de alta --}}
+    {{!-- Formulario modificacion--}}
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <form action="/admin/productos/agregar" method="post" class="bg-light p-4 rounded border shadow-sm">
+        <div class="col-6 offset-3">
+            <form method="post" action="/admin/productos/modificar/{{producto.id}}" class="bg-light p-4 rounded border shadow-sm">
 
                 {{!-- Campo Título --}}
                 <div class="mb-3">
