@@ -50,13 +50,42 @@ router.get('/eliminar/:id', async (req, res, next) => {
   res.redirect('/admin/productos');
 });
 
+
+/*para listar UNA SOLA NOVEDAD - MODIFICAR*/
 router.get('/modificar/:id', async (req, res, next) => {
-  let id = req.params.id;
-  let producto = await productosModel.getProductoById(id);
+  var id = req.params.id;
+  console.log(id);
+  var producto = await productosModel.getProductoById(id);
+
   res.render('admin/modificar', {
     layout: 'admin/layout',
     producto
   });
+
+});
+
+router.post('/modificar', async (req, res, next) => {
+  try {
+    var obj = {
+      titulo: req.body.titulo,
+      subtitulo: req.body.subtitulo,
+      cuerpo: req.body.cuerpo,
+      precio: req.body.precio
+    };
+    console.log(obj);
+
+
+    await productosModel.modificarProductoById(obj, req.body.id);
+    res.redirect('/admin/productos');
+
+  } catch (error) {
+    console.log(error);
+    res.render('admin/modificar', {
+      layout: 'admin/layout',
+      error: true,
+      message: 'No se pudo modificar'
+    });
+  }
 });
 
 module.exports = router;

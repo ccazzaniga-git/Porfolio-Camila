@@ -1,4 +1,4 @@
-var pool = require('./bd')
+var pool = require('./bd');
 
 async function getProductos() {
     var query = "select * from productos";
@@ -30,6 +30,8 @@ async function getProductoById(id) {
     return rows[0];
 }
 
+
+/* para modificar el update de los datos */
 async function modificarProductoById(obj, id) {
     try {
         var query = "update productos set ? where id = ?";
@@ -37,6 +39,9 @@ async function modificarProductoById(obj, id) {
         return rows;
     } catch (error) {
         throw error;
+    }
 }
 
-module.exports = { getProductos, insertProducto, deleteProductoById, getProductoById, modificarProductoById }
+
+
+module.exports = { getProductos, insertProducto, deleteProductoById, getProductoById, modificarProductoById };
