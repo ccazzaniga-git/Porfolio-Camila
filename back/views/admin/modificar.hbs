@@ -6,12 +6,13 @@
             <h2 class="mb-4">Modificar Producto n° {{producto.id}}</h2>
         </div>
         <div class="col-5 text-end">
-            <a class="btn btn-secondary" href="/admin/productos"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <a class="btn btn-secondary" href="/admin/productos"><i class="fa fa-arrow-left" aria-hidden="true"
+                    enctype="multipart/form-data"></i>
                 Volver</a>
         </div>
     </div>
 
-    {{!-- Formulario  --}}
+    {{!-- Formulario --}}
     <div class="row justify-content-center">
         <div class="col-md-8">
             <form method="post" action="/admin/productos/modificar" class="bg-light p-4 rounded border shadow-sm">
@@ -36,22 +37,35 @@
                     <textarea class="form-control" name="cuerpo">{{producto.cuerpo}}</textarea>
                 </div>
 
+                {{!-- Campo Imagen --}}
+                <div class="mb-4">
+                    <label for="imagen" class="form-label">Imagen</label>
+                    <input type="file" id="imagen" name="imagen">
+                </div>
+                <div class="mb-4">
+                    <label><input type="checkbox" name="img_delete" id="img_delete" value="1"> Eliminar imagen
+                        actual</label>
+                    <input type="hidden" name="img_original" value="{{producto.img_id}}">
+                </div>
+
                 {{!-- Campo Precio --}}
                 <div class="mb-4">
                     <label for="precio" class="form-label">Valor</label>
-                    <input type="number" step="0.01" min="0" class="form-control" name="precio" value="{{producto.precio}}">
+                    <input type="number" step="0.01" min="0" class="form-control" name="precio"
+                        value="{{producto.precio}}">
                 </div>
 
                 {{!-- Botones de acción --}}
                 <div class="d-flex justify-content-end gap-2">
-                    <button type="submit" class="btn btn-success"><i class="fa fa-save" aria-hidden="true"></i> Guardar modificación</button>
+                    <button type="submit" class="btn btn-success"><i class="fa fa-save" aria-hidden="true"></i> Guardar
+                        modificación</button>
                 </div>
 
             </form>
 
             {{!-- Mensaje de error (si falla la validación en el servidor) --}}
             {{#if error}}
-                <p class="text-danger">No se pudo modificar el producto</p>
+            <p class="text-danger">No se pudo modificar el producto</p>
             {{/if}}
 
 
