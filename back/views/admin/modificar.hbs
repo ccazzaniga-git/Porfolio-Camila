@@ -6,8 +6,7 @@
             <h2 class="mb-4">Modificar Producto n° {{producto.id}}</h2>
         </div>
         <div class="col-5 text-end">
-            <a class="btn btn-secondary" href="/admin/productos"><i class="fa fa-arrow-left" aria-hidden="true"
-                    enctype="multipart/form-data"></i>
+            <a class="btn btn-secondary" href="/admin/productos"><i class="fa fa-arrow-left" aria-hidden="true"></i>
                 Volver</a>
         </div>
     </div>
@@ -15,7 +14,7 @@
     {{!-- Formulario --}}
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <form method="post" action="/admin/productos/modificar" class="bg-light p-4 rounded border shadow-sm">
+            <form method="post" action="/admin/productos/modificar" class="bg-light p-4 rounded border shadow-sm" enctype="multipart/form-data">
 
                 <input type="hidden" name="id" value="{{producto.id}}">
 

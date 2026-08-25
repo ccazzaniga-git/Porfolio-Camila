@@ -35,6 +35,7 @@ CREATE TABLE `novedades` (
   `titulo` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
   `subtitulo` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `cuerpo` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `img_id` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -45,7 +46,7 @@ CREATE TABLE `novedades` (
 
 LOCK TABLES `novedades` WRITE;
 /*!40000 ALTER TABLE `novedades` DISABLE KEYS */;
-INSERT INTO `novedades` VALUES (1,'Lujan','Marroquinería online','• Desarrollo de estrategia de comunicación\n• Diseño de marca y naming\n• Diseño de imágenes para web y redes sociales\n• Product Manager\n• Gestión de página web en Tienda Nube'),(2,'Proyecto 2','Kinesiólogo','• Diseño de placas para redes sociales.\n• Digitalización de imágenes.');
+INSERT INTO `novedades` VALUES (1,'Lujan','Marroquinería online','• Desarrollo de estrategia de comunicación\n• Diseño de marca y naming\n• Diseño de imágenes para web y redes sociales\n• Product Manager\n• Gestión de página web en Tienda Nube',NULL),(2,'Proyecto 2','Kinesiólogo','• Diseño de placas para redes sociales.\n• Digitalización de imágenes.',NULL);
 /*!40000 ALTER TABLE `novedades` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,8 +63,9 @@ CREATE TABLE `productos` (
   `subtitulo` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cuerpo` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `precio` int NOT NULL,
+  `img_id` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +74,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (1,'Armado de web + Marca','Servicios que contiene este servicio','La información detallada de esto que sería el serviico paso a paso',200000),(2,'Gestión de comunicación institucional','Servicios que contiene este servicio','La información detallada de esto que sería el serviico paso a paso',200000),(3,'Página web','Servicios que contiene este servicio','La información detallada de esto que sería el serviico paso a paso',200000),(5,'1','1','1',1);
+INSERT INTO `productos` VALUES (1,'Armado de web + Marca','Servicios que contiene este servicio','La información detallada de esto que sería el serviico paso a paso',200000,NULL),(2,'Gestión de comunicación institucional','Servicios que contiene este servicio','La información detallada de esto que sería el serviico paso a paso',200000,NULL),(3,'Página web','Servicios que contiene este servicio','La información detallada de esto que sería el serviico paso a paso',200000,NULL),(5,'1','1','1',1,NULL),(6,'222','222','222',222,'adnkjrzzjhfrktroegla');
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,4 +117,4 @@ SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-24 20:42:23
+-- Dump completed on 2026-08-24 21:54:43
