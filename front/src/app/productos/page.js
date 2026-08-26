@@ -1,20 +1,31 @@
-import Image from "next/image";
-import ProductoItem from "@/componentes/ProductoItem";
+import ProductoItem from "@/componentes/productoItem";
+
 
 export const metadata = {
-    title: "Portfolio Camila :: Productos",
-    description: "Portfolio y trabajo final",
+    title: "Productos",
+    description: "Portfolio",
 };
 
-export default function Productos() {
-    return (
+export default async function Productos() {
 
+    const data = await fetch(
+        `${process.env.API_BASE_URL}/api/productos`,
+        { cache: 'no-store' });
+
+    const productos = await data.json();
+
+    return (
         <section className="holder">
-            <h3> Info que sale de base de datos por los precios </h3>
-                < ProductoItem titulo="este es el nombre titulo de un producto" subtitulo="este es el subtitulo" imagen="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrY1hG177dZZYJalrQl8tsZBSEk-TOQPMYemetti7JFw&s=10" body="<p>Esta es la descripción del producto.</p>" />
-                < ProductoItem titulo="este es el nombre titulo de otro producto" subtitulo="este es el subtitulo" imagen="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrY1hG177dZZYJalrQl8tsZBSEk-TOQPMYemetti7JFw&s=10" body="<p>Esta es la descripción del producto.</p>" />
-                < ProductoItem titulo="este es el nombre titulo de un tercer producto" subtitulo="este es el subtitulo" imagen="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrY1hG177dZZYJalrQl8tsZBSEk-TOQPMYemetti7JFw&s=10" body="<p>Esta es la descripción del producto.</p>" />
+            <h3> Productos </h3>
+            {
+                productos.map(item => <ProductoItem key={item.id}
+                    title={item.titulo} subtitle={item.subtitulo}
+                    imagen={item.imagen} body={item.cuerpo} />)
+            }
+
         </section>
 
-    );
+    )
 }
+
+

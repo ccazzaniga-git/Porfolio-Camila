@@ -1,7 +1,7 @@
 
 import "@/styles/contacto.css";
 
-import ContactoForm from "@/componentes/ContactoForm";
+import contactoForm from "/componentes/contactoForm";
 
 export const metadata = {
     title: "Contacto",
@@ -15,7 +15,7 @@ export default function Contacto() {
             <div className="columna">
                 <h2>Completa el siguiente formulario</h2>
                 
-               <ContactoForm/>
+               <contactoForm/>
 
             </div>
             <div className="columna">

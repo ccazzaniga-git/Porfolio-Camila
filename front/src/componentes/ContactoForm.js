@@ -1,4 +1,4 @@
-export default function ContactoForm() {
+export default function contactoForm() {
 
     return (
         <>

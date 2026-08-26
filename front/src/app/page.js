@@ -8,7 +8,7 @@ export default function Home() {
     <div className="">
       <main className="holder">
         <div className="Homeimg">
-          <img src="/homeimg.png" alt="Homeimagen" />
+          <img src="//estrellita.gif" alt="Homeimagen" />
         </div>
         <div className="columnas">
           <div className="bienvenidos">
