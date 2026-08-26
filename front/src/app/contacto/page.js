@@ -1,21 +1,21 @@
 
 import "@/styles/contacto.css";
 
-import contactoForm from "/componentes/contactoForm";
+import ContactoForm from "@/componentes/contactoForm";
 
 export const metadata = {
     title: "Contacto",
     description: "Portfolio y trabajo final",
 };
 
-export default function Contacto() {    
+export default function Contacto() {
 
     return (
         <main className="holder contacto">
             <div className="columna">
                 <h2>Completa el siguiente formulario</h2>
-                
-               <contactoForm/>
+
+                <ContactoForm postUrl={'${process.env.API_BASE_URL}/api/contacto'} />
 
             </div>
             <div className="columna">
@@ -28,5 +28,5 @@ export default function Contacto() {
                 </ul>
             </div>
         </main>
-    );
-}
+    )
+};

@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var productosModel = require('./../models/productosModel');
-
 var cloudinary = require('cloudinary').v2;
+var nodemailer = require('nodemailer');
 
 
 router.get('/productos', async function (req, res, next) {
@@ -30,6 +30,31 @@ router.get('/productos', async function (req, res, next) {
 
   res.json(productos);
 
+});
+
+router.post('/contacto', async (req, res) => {
+  const mail = {
+    to: 'ccazzanigaux@gmail.com',
+    subject: 'SOLICITUD DE CONTACTO - Porfolio Camila Cazzaniga',
+    html: `${req.body.nombre} se contactó a través de la web y quiere mas información a este correo: ${req.body.email} <br> Dijo lo siguiente: ${req.body.mensaje} <br> Su teléfono es: ${req.body.telefono}`
+  };
+
+  const transport = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT,
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASSWORD
+    }
+  });
+
+  await transport.sendMail(mail)
+
+  res.status(201).json({
+    error: false,
+    message: 'Correo enviado correctamente'
+  });
+  
 });
 
 module.exports = router;
