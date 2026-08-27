@@ -9,24 +9,24 @@ router.get('/productos', async function (req, res, next) {
 
   let productos = await productosModel.getProductos();
 
-    productos = productos.map(productos => {
-        if(productos.img_id){
-            const imagen = cloudinary.url(productos.img_id, {
-                width: 960,
-                height: 200,
-                crop: 'fill'
-            });
-            return {
-                ...productos,
-                imagen
-            }
-        } else {
-            return {
-                ...productos,
-                imagen: ''
-            }
-        }
-    });
+  productos = productos.map(productos => {
+    if (productos.img_id) {
+      const imagen = cloudinary.url(productos.img_id, {
+        width: 960,
+        height: 200,
+        crop: 'fill'
+      });
+      return {
+        ...productos,
+        imagen
+      }
+    } else {
+      return {
+        ...productos,
+        imagen: ''
+      }
+    }
+  });
 
   res.json(productos);
 
@@ -39,7 +39,7 @@ router.post('/contacto', async (req, res) => {
     html: `${req.body.nombre} se contactó a través de la web y quiere mas información a este correo: ${req.body.email} <br> Dijo lo siguiente: ${req.body.mensaje} <br> Su teléfono es: ${req.body.telefono}`
   };
 
-const transport = nodemailer.createTransport({
+  const transport = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: parseInt(process.env.SMTP_PORT) || 2525, // Forzamos que lea el puerto como número
     auth: {
@@ -58,7 +58,7 @@ const transport = nodemailer.createTransport({
     error: false,
     message: 'Correo enviado correctamente'
   });
-  
+
 });
 
 module.exports = router;

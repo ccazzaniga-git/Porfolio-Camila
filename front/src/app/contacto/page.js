@@ -1,7 +1,7 @@
 
 import "@/styles/contacto.css";
 
-import ContactoForm from "@/componentes/contactoForm";
+import ContactoForm from "@/componentes/ContactoForm";
 
 export const metadata = {
     title: "Contacto",

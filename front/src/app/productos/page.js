@@ -1,4 +1,4 @@
-import ProductoItem from "@/componentes/productoItem";
+import ProductoItem from "@/componentes/ProductoItem";
 
 
 export const metadata = {

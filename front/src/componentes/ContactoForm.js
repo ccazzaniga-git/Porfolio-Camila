@@ -25,49 +25,67 @@ export default function ContactoForm({ postUrl }) {
 
       const handleSubmit = async e => {
             e.preventDefault();
+
             setMsg('');
             setSending(true)
 
-            const rawResponse = await fetch(postUrl, {
-                  method: 'POST',
-                  headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                  },
-                  body: JSON.stringify(formData)
-            });
+            try {
+                  const rawResponse = await fetch(postUrl, {
+                        method: 'POST',
+                        headers: {
+                              'Accept': 'application/json',
+                              'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                  });
 
-            const response = await rawResponse.json();
-            console.log(response);
-            setSending(false);
-            setMsg(response.message);
-            if (response.error === false) {
-                  setFormData(initialForm)
+                  const response = await rawResponse.json();
+
+                  if (!rawResponse.ok) {
+                        throw new Error(
+                              response.message || 'No se pudo enviar el mensaje'
+                        );
+                  }
+
+                  setMsg(response.message);
+
+                  if (response.error === false) {
+                        setFormData(initialForm);
+                  }
+
+            } catch (error) {
+                  console.error('Error al enviar el formulario:', error);
+
+                  setMsg(
+                        error.message || 'Error al enviar el mensaje. Intentá nuevamente.'
+                  );
+
+            } finally {
+                  setSending(false);
             }
       }
-
       return (
             <>
                   <form action="/contacto" method="post" onSubmit={handleSubmit} className="formulario">
                         <p>
-                         <label>Nombre</label>
-                         <input type="text" name="nombre" value={formData.nombre} 
-                         onChange={handleChange} />
+                              <label>Nombre</label>
+                              <input type="text" name="nombre" value={formData.nombre}
+                                    onChange={handleChange} />
                         </p>
                         <p>
-                         <label>Email</label>
-                         <input type="text" name="email" value={formData.email} 
-                         onChange={handleChange} />
+                              <label>Email</label>
+                              <input type="text" name="email" value={formData.email}
+                                    onChange={handleChange} />
                         </p>
                         <p>
-                         <label>Teléfono</label>
-                         <input type="text" name="telefono" value={formData.telefono}
-                         onChange={handleChange} />
+                              <label>Teléfono</label>
+                              <input type="text" name="telefono" value={formData.telefono}
+                                    onChange={handleChange} />
                         </p>
                         <p>
-                         <label>Comentario</label>
-                         <textarea name="mensaje" value={formData.mensaje}
-                         onChange={handleChange}></textarea>
+                              <label>Comentario</label>
+                              <textarea name="mensaje" value={formData.mensaje}
+                                    onChange={handleChange}></textarea>
                         </p>
 
                         <p className="centrar"><input type="submit" value="Enviar" /></p>
