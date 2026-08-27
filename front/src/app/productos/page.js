@@ -9,7 +9,7 @@ export const metadata = {
 export default async function Productos() {
 
     const data = await fetch(
-        `${process.env.API_BASE_URL}/api/productos`,
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/productos`,
         { cache: 'no-store' });
 
     const productos = await data.json();
