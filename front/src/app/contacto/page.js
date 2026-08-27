@@ -15,7 +15,9 @@ export default function Contacto() {
             <div className="columna">
                 <h2> Dejame tu consulta </h2>
 
-            <ContactoForm postUrl="http://localhost:4000/api/contacto" />
+            <ContactoForm
+                postUrl={`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/contacto`}
+            />
             
             </div>
             <div className="columna">
