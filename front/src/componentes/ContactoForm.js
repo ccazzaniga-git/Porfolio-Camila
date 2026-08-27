@@ -7,7 +7,7 @@ export default function ContactoForm({ postUrl }) {
       const initialForm = {
             nombre: '',
             email: '',
-            teléfono: '',
+            telefono: '',
             mensaje: ''
       }
 
@@ -26,7 +26,7 @@ export default function ContactoForm({ postUrl }) {
       const handleSubmit = async e => {
             e.preventDefault();
             setMsg('');
-            setSending(true);
+            setSending(true)
 
             const rawResponse = await fetch(postUrl, {
                   method: 'POST',
@@ -42,7 +42,7 @@ export default function ContactoForm({ postUrl }) {
             setSending(false);
             setMsg(response.message);
             if (response.error === false) {
-                  setFormData(initialForm);
+                  setFormData(initialForm)
             }
       }
 
@@ -50,20 +50,24 @@ export default function ContactoForm({ postUrl }) {
             <>
                   <form action="/contacto" method="post" onSubmit={handleSubmit} className="formulario">
                         <p>
-                              <label>Nombre</label>
-                              <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} />
+                         <label>Nombre</label>
+                         <input type="text" name="nombre" value={formData.nombre} 
+                         onChange={handleChange} />
                         </p>
                         <p>
-                              <label>Email</label>
-                              <input type="text" name="email" value={formData.email} onChange={handleChange} />
+                         <label>Email</label>
+                         <input type="text" name="email" value={formData.email} 
+                         onChange={handleChange} />
                         </p>
                         <p>
-                              <label>Teléfono</label>
-                              <input type="text" name="teléfono" value={formData.teléfono} onChange={handleChange} />
+                         <label>Teléfono</label>
+                         <input type="text" name="telefono" value={formData.telefono}
+                         onChange={handleChange} />
                         </p>
                         <p>
-                              <label>Comentario</label>
-                              <textarea name="mensaje" value={formData.mensaje} onChange={handleChange}></textarea>
+                         <label>Comentario</label>
+                         <textarea name="mensaje" value={formData.mensaje}
+                         onChange={handleChange}></textarea>
                         </p>
 
                         <p className="centrar"><input type="submit" value="Enviar" /></p>

@@ -13,18 +13,18 @@ export default function Contacto() {
     return (
         <main className="holder contacto">
             <div className="columna">
-                <h2>Completa el siguiente formulario</h2>
+                <h2> Dejame tu consulta </h2>
 
-                <ContactoForm postUrl={'${process.env.API_BASE_URL}/api/contacto'} />
-
+            <ContactoForm postUrl="http://localhost:4000/api/contacto" />
+            
             </div>
             <div className="columna">
-                <h2>Otra manera de contactarnos</h2>
-                <p>A través de los siguientes medios:</p>
+                <h2> Contame tu proyecto </h2>
+                <p> Podemos trabajar en conjunto para desarrollar soluciones innovadoras que impulsen tu idea.</p>
                 <ul>
-                    <li>Teléfono: 123456789</li>
-                    <li>Email: </li>
-                    <li>LinkedIn</li>
+                    <li> Mejorando la comunicación </li>
+                    <li> Generando identidad </li>
+                    <li> Creando su espacio en la web </li>
                 </ul>
             </div>
         </main>
