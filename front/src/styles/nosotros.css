@@ -15,9 +15,10 @@
 .personas {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     max-width: 960px;
-    margin: 0 auto;
+    align-items: flex-end; 
+    margin: 20px auto;
 }
 
 
@@ -35,9 +36,8 @@
 
 
 .persona img {
-    width: 350px;
+    width: 100px;
     max-width: 60%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: auto;
     display: block;
 }

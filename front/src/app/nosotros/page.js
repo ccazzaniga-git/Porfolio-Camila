@@ -28,7 +28,7 @@ export default function Nosotros() {
                             <p>Estudie la carrera y trabaje en proyectos pequeños</p>
                         </div>
 
-                        <img src="/estrella1.png" alt="Trabajo 1" />
+                        <img src="/estrella.png" alt="Trabajo 1" />
 
                     </div>
 
@@ -40,7 +40,7 @@ export default function Nosotros() {
                               <p> Luego de 2 años de adscripción comencé a trabajar como docente. </p>
                         </div>
 
-                        <img src="/nosotros1.png" alt="Trabajo 2" />
+                        <img src="/cafe.png" alt="Trabajo 2" />
 
                     </div>
 
@@ -51,7 +51,7 @@ export default function Nosotros() {
                             <p> Me especialicé en la experiencia del usuario y el diseño de productos digitales. </p>
                         </div>
 
-                        <img src="/nosotros3.jpg" alt="Trabajo 3" />
+                        <img src="/gato.png" alt="Trabajo 3" />
                     </div>
 
                     <div className="persona">
@@ -61,7 +61,7 @@ export default function Nosotros() {
                             <p> Me metí en el mundo del desarrollo web.</p>
                         </div>
 
-                        <img src="/nosotros3.jpg" alt="Trabajo 3" />
+                        <img src="/ke.png" alt="Trabajo 3" />
                     </div>
 
                 </div>
