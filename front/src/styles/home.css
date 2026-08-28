@@ -1,46 +1,55 @@
+/* =========================================
+   HOME
+   ========================================= */
 
 .bienvenidos {
     width: 70%;
     padding-right: 25px;
     box-sizing: border-box;
-    /*background-color: aquamarine;*/
 }
+
 
 .testimonios {
     width: 30%;
     padding-left: 5px;
     justify-content: space-between;
-    /*background-color: #C83609;*/
 }
 
-.testimonios h2{
-    font-size: 20px;
-}
 
-.columnas{
+.columnas {
     display: flex;
 }
 
-.bienvenidos p{
+
+.bienvenidos p {
     font-size: 18px;
     line-height: 21px;
 }
 
+
+.testimonios h2 {
+    font-size: 20px;
+}
+
+
 .testimonio {
-    background-color: #74d4fa8a;
+    background: var(--color-azul);
+    border-radius: 15px;
     padding: 16px;
 }
 
+
 .testimonio .cita {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 16px;
     font-style: italic;
     display: block;
 }
 
+
 .testimonio .autor {
-    font-weight: thin;
+    font-weight: 400;
     font-size: 12px;
     display: block;
-    text-align: center;
+    text-align: right;
 }

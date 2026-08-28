@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
           <div className="holder">
             <div className="logo">
               <img src="/logopeque.svg" alt="Logo" />
-              <h1>Hola! Soy Camilictucs</h1>
+              <h1>Hola! Soy Camila</h1>
             </div>
           </div>
         </header>
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         {children}
 
         <footer>
-          <p> Diseñador por Camila Cazzaniga &copy;2026 </p>
+          <p> Diseñado por Camila Cazzaniga &copy;2026 </p>
         </footer>
       </body>
     </html>
