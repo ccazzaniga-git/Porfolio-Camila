@@ -65,7 +65,7 @@ CREATE TABLE `productos` (
   `precio` int NOT NULL,
   `img_id` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,7 +74,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (1,'Armado de web + Marca','Servicios que contiene este servicio','La información detallada de esto que sería el serviico paso a paso',200000,NULL),(2,'Gestión de comunicación institucional','Servicios que contiene este servicio','La información detallada de esto que sería el serviico paso a paso',200000,NULL),(3,'Página web','Servicios que contiene este servicio','La información detallada de esto que sería el serviico paso a paso',200000,NULL),(5,'1','1','1',1,NULL),(6,'222','222','222',222,'adnkjrzzjhfrktroegla');
+INSERT INTO `productos` VALUES (1,'Tu marca completa','Manual de marca / Manual de comunicación / Web básica','Desarrollamos tu marca en todos sus frentes. Marca completa con desarrollo de su perfil comunicacional y público objetivo. Salís al mercado con una web de presentación y un diseño impactante y con sentido',800000,'dbdoqbmaesfty0qgmxgo'),(2,'Gestión de comunicación institucional','Servicios que contiene este servicio','La información detallada de esto que sería el servicio paso a paso',200000,'rhftjkg24x0fjzzznspo'),(3,'Página web','Servicios que contiene este servicio','La información detallada de esto que sería el serviico paso a paso',200000,NULL),(7,'Ejemplo','Para la entrega','Final del trabajo',1000000,'tufypvsyxkrdfdh7kaw1');
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,4 +117,4 @@ SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-24 21:54:43
+-- Dump completed on 2026-08-28 21:56:31
