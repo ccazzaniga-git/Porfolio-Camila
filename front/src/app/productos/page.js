@@ -16,11 +16,11 @@ export default async function Productos() {
 
     return (
         <section className="holder">
-            <h3> Productos </h3>
+            <h2> • • • </h2>
             {
                 productos.map(item => <ProductoItem key={item.id}
-                    title={item.titulo} subtitle={item.subtitulo}
-                    imagen={item.imagen} body={item.cuerpo} />)
+                    title={item.titulo} imagen={item.imagen} subtitle={item.subtitulo}
+                    body={item.cuerpo} />)
             }
 
         </section>

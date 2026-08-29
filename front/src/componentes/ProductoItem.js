@@ -6,8 +6,8 @@ export default async function ProductoItem (props) {
     return (
         <div className="productos">
             <h1>{title}</h1>
-            <h2>{subtitle}</h2>
             <img src={imagen || null } alt={title} />
+            <h3>{subtitle}</h3>
             <div dangerouslySetInnerHTML={{ __html: body }} />
             <hr />
         </div>
